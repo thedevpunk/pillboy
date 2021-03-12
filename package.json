@@ -1,33 +1,31 @@
 {
-  "name": "pillboy",
+  "name": "pillbuddy",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/main.js",
   "scripts": {
-    "build": "webpack",
-    "react:dev": "webpack serve --mode=development",
-    "electron:dev": "nodemon",
-    "dev": "concurrently --kill-others \"npm run react:dev\" \"npm run electron:dev\"",
-    "start": "npm run build && electron dist/main.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev:electron": "SET NODE_ENV=development && webpack --config webpack.electron.config.js --mode development && electron .",
+    "dev:react": "SET NODE_ENV=development && webpack serve --config webpack.react.config.js --mode development"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/react": "^17.0.3",
-    "@types/react-dom": "^17.0.2",
-    "concurrently": "^6.0.0",
+    "@babel/core": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
+    "@babel/preset-react": "^7.12.13",
+    "@babel/preset-typescript": "^7.13.0",
+    "babel-loader": "^8.2.2",
     "electron": "^12.0.1",
-    "electron-is-dev": "^2.0.0",
     "html-webpack-plugin": "^5.3.1",
-    "nodemon": "^2.0.7",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "ts-loader": "^8.0.18",
-    "typescript": "^4.2.3",
     "webpack": "^5.24.4",
     "webpack-cli": "^4.5.0",
     "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   }
 }
