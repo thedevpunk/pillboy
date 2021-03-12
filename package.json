@@ -1,11 +1,11 @@
 {
-  "name": "pillbuddy",
+  "name": "pillboy",
   "version": "1.0.0",
   "description": "",
   "main": "./dist/main.js",
   "scripts": {
-    "dev:electron": "SET NODE_ENV=development && webpack --config webpack.electron.config.js --mode development && electron .",
-    "dev:react": "SET NODE_ENV=development && webpack serve --config webpack.react.config.js --mode development"
+    "dev:electron": "NODE_ENV=development && webpack --config webpack.electron.config.js --mode development && electron .",
+    "dev:react": "NODE_ENV=development && webpack serve --config webpack.react.config.js --mode development"
   },
   "keywords": [],
   "author": "",
